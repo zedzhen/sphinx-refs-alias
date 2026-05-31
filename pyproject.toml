@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=81"]
+
+[project]
+name = "sphinx-refs-alias"
+description = "Add support alias for reference."
+readme = "readme.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ярыкин Евгений", email = "pypi@zedzhen.ru" }
+]
+dependencies = [
+    'sphinx>=8,<10',
+]
+dynamic = ["version"]
+classifiers = [
+    "Framework :: Sphinx :: Extension",
+]
+
+[project.urls]
+source = "https://github.com/zedzhen/sphinx-refs-alias"
+
+[project.optional-dependencies]
+dev = [
+    'black~=26.5',
+    'isort~=8.0',
+    "build==1.5.*",
+    "pre-commit~=4.6",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "sphinx_refs_alias.__version__" }
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
