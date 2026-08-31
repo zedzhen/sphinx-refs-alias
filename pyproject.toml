@@ -24,7 +24,7 @@ source = "https://github.com/zedzhen/sphinx-refs-alias"
 [project.optional-dependencies]
 dev = [
     'black~=26.5',
-    'isort~=8.0',
+    'isort>=8,<10',
     "build==1.5.*",
     "pre-commit~=4.6",
 ]
