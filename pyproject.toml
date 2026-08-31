@@ -25,7 +25,7 @@ source = "https://github.com/zedzhen/sphinx-refs-alias"
 dev = [
     'black~=26.5',
     'isort~=8.0',
-    "build==1.5.*",
+    "build>=1.5,<1.7",
     "pre-commit~=4.6",
 ]
 
